@@ -32,12 +32,12 @@ export function ShoppingCart({ isOpen, products }: ShoppingCartProps) {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
-          {cartItems.map((item) => {
-            const product = products.find((p) => p.id === item.id);
-            return product ? (
-              <CartItem products={[]} key={item.id} {...product} quantity={item.quantity} />
-            ) : null;
-          })}
+        {cartItems.map((item) => {
+          const product = products.find((p) => p.id === item.id);
+          return product ? (
+            <CartItem key={product.id} products={products} idd={product.id} quantity={item.quantity} />
+          ) : null;
+        })}
           <div className="ms-auto fw-bold fs-5">
             Total{" "}
             {formatCurrency(

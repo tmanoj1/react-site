@@ -17,16 +17,17 @@ type Product = {
 }
 
 type CartItemProps = {
-  id: number
+  idd: number
   quantity: number
   products: Product[]
 }
 
-export function CartItem({ id, quantity, products }: CartItemProps) {
+export function CartItem({ idd, quantity, products }: CartItemProps) {
+  {console.log(idd)}
   const { removeFromCart } = useShoppingCart()
-  const product = products.find(p => p.id === id)
+  const product = products.find(p => p.id === idd )
+  {console.log(product)}
   if (product == null) return null
-
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img
