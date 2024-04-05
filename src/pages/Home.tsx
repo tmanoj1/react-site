@@ -14,7 +14,7 @@ export function Home() {
           height: "100vh",
         }}
       >
-        <div style={{ marginBottom: "50px", marginTop: "100px", fontSize: '3em' }}>
+        <div style={{ marginBottom: "20px", marginTop: "100px", fontSize: '3em' }}>
           <p>
             One stop shop for{" "}
             <span style={{ fontWeight: "bold" }}>Everyone</span>
