@@ -23,10 +23,8 @@ type CartItemProps = {
 }
 
 export function CartItem({ idd, quantity, products }: CartItemProps) {
-  {console.log(idd)}
   const { removeFromCart } = useShoppingCart()
   const product = products.find(p => p.id === idd )
-  {console.log(product)}
   if (product == null) return null
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
