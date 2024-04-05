@@ -40,10 +40,6 @@ export function Store({ products }: StoreProps) {
     );
   }, [searchQuery, products]);
 
-  const handleSearch = () => {
-    // You can perform any additional actions here if needed
-  };
-
   return (
     <>
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
@@ -56,9 +52,6 @@ export function Store({ products }: StoreProps) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <Button variant="outline-success" onClick={handleSearch}>
-            Search
-          </Button>
         </Form>
       </div>
       <Row md={2} xs={1} lg={3} className="g-3">
